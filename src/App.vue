@@ -1,12 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Navbar />
+
     <router-view/>
   </div>
 </template>
+
+<script>
+import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import Navbar from "@/components/Navbar.vue";
+
+Vue.use(VueAxios, axios)
+
+export default {
+  name: "App",
+
+  components: {
+    Navbar,
+  }
+}
+</script>
 
 <style>
 #app {
