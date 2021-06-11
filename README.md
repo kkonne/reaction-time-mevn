@@ -1,24 +1,17 @@
-# vue-reaction-time
+# Reaction Time Test Multiplayer Game
 
-## Project setup
+## Project game made in Vue with VueX, VueRouter, Vuetify using MEVN stack and Socket.io
+
+## Project setup and install dependencies
+
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Made by Josip Leko
