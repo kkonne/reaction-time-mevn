@@ -1,9 +1,23 @@
 <template>
-  <div id="app">
-    <Navbar />
+  <v-app id="inspire">
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+    >
+      <Navbar />
 
-    <router-view/>
-  </div>
+    </v-navigation-drawer>
+
+    <v-app-bar app>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+
+      <v-toolbar-title>Reaction Time Test</v-toolbar-title>
+    </v-app-bar>
+
+    <v-main>
+      <router-view class="pa-6" />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
@@ -19,6 +33,12 @@ export default {
 
   components: {
     Navbar,
+  },
+  
+  data(){
+    return {
+      drawer: null,
+    }
   }
 }
 </script>

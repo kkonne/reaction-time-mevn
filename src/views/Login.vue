@@ -1,20 +1,32 @@
 <template>
   <div id="login">
-      <h1>Login page</h1>
-      
-      <form @submit.prevent="loginUser">
-            <label for="login-email">Email</label>
-            <input v-model="emailInput" type="email" name="login-email">
+    <h1 class="mb-3">Login page</h1>
 
-            <br>
+    <form @submit.prevent="loginUser">
 
-            <label for="login-password">Password</label>
-            <input v-model="passwordInput" type="password" name="login-password">
+        <v-input>
+            <v-text-field
+            v-model="emailInput"
+            label="Email">
+            </v-text-field>
+        </v-input>
 
-            <br>
+        <v-input>
+            <v-text-field
+            v-model="passwordInput"
+            label="Password"
+            type="password">
+            </v-text-field>
+        </v-input>
 
-            <input type="submit" value="Login">
-        </form>
+        <v-btn
+        type="submit"
+        elevation="2"
+        outlined
+        tile
+        :disabled="!emailInput || !passwordInput"
+        >Login</v-btn>
+    </form>
   </div>
 </template>
 
