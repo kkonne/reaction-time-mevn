@@ -7,8 +7,7 @@ import vuetify from './plugins/vuetify'
 
 require('@/store/subscriber')
 
-// axios.defaults.baseURL = "https://sysdev.nsoft.com/";
-axios.defaults.baseURL = "https://zadatak-jleko.provjeri.ga/";
+axios.defaults.baseURL = "";
 
 Vue.config.productionTip = false
 
